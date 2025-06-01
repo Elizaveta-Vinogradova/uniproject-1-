@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: 66aa8f0edc2254499ac945be7a34d98a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  missingFiles: []
+  errors:
+  - Invalid rectangle (Tile ID ='651') in tileset 'first_level_tileset' has zero
+    width
+  - Invalid rectangle (Tile ID ='651') in tileset 'first_level_tileset' has zero
+    width
+  - Invalid rectangle (Tile ID ='1136') in tileset 'first_level_tileset' has zero
+    width
+  - Invalid rectangle (Tile ID ='1221') in tileset 'first_level_tileset' has zero
+    width
+  - Invalid rectangle (Tile ID ='1349') in tileset 'first_level_tileset' has zero
+    width
+  - Invalid rectangle (Tile ID ='1490') in tileset 'first_level_tileset' has zero
+    height
+  - Invalid rectangle (Tile ID ='1749') in tileset 'first_level_tileset' has zero
+    height
+  - Invalid rectangle (Tile ID ='1749') in tileset 'first_level_tileset' has zero
+    width
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 13
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 4099
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
