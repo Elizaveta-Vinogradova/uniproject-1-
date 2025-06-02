@@ -27,26 +27,24 @@ public class Arrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("CoffeeGrain"))
-            return;
+        if (collision.CompareTag("CoffeeGrain")) return;
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("explode");
         if (!collision.CompareTag("Enemy")) return;
         collision.GetComponent<HealthForOther>().TakeDamage(damage);
     }
-    public void SetDirection(float _direction)
+    public void SetDirection(float directionArrow)
     {
         lifetime = 0;
-        direction = _direction;
+        direction = directionArrow;
         gameObject.SetActive(true);
         hit = false;
         boxCollider.enabled = true;
 
         var localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != _direction)
+        if (Mathf.Sign(localScaleX) != directionArrow)
             localScaleX = -localScaleX;
-
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
     

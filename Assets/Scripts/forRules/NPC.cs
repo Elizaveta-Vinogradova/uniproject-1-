@@ -16,11 +16,7 @@ public class NPC : MonoBehaviour
     private Animator anim;
     [SerializeField] private AudioClip speechSound;
 
-    // Update is called once per frame
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
+    void Start() => anim = GetComponent<Animator>();
     void FixedUpdate()
     {
         if (playerIsClose)
@@ -36,9 +32,7 @@ public class NPC : MonoBehaviour
         }
 
         if (dialogueText.text == dialogue[index] && index != dialogue.Length - 1)
-        {
             contButton.SetActive(true);
-        }
     }
 
     private void ZeroText()
@@ -69,27 +63,21 @@ public class NPC : MonoBehaviour
             StartCoroutine(Typing());
         }
         else
-        {
             ZeroText();
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            if(other.transform.localScale.x > 0 && transform.localScale.x < 0 || other.transform.localScale.x < 0 && transform.localScale.x > 0)
-                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-            playerIsClose = true;
-        }
+        if (!other.CompareTag("Player")) return;
+        if(other.transform.localScale.x > 0 && transform.localScale.x < 0 || other.transform.localScale.x < 0 && transform.localScale.x > 0)
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+        playerIsClose = true;
     }
     
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerIsClose = false;
-            ZeroText();
-        }
+        if (!other.CompareTag("Player")) return;
+        playerIsClose = false;
+        ZeroText();
     }
 }

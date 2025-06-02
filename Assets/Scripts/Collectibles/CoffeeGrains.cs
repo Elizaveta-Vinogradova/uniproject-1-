@@ -15,7 +15,6 @@ public class CoffeeGrains : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("here is a grain");
         if (!other.CompareTag("Player")) return;
         player.AmountOfGrains += scoreValue;
         SoundManager.instance.PlaySound(collectSound);

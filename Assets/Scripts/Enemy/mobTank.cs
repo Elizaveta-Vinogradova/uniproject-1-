@@ -54,15 +54,15 @@ public class EnemyPatrol : MonoBehaviour
             movingLeft = !movingLeft;
     }
 
-    private void MoveInDirection(int _direction)
+    private void MoveInDirection(int direction)
     {
         idleTimer = 0;
         anim.SetBool("moving", true);
 
-        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction,
+        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction,
             initScale.y, initScale.z);
 
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * direction * speed,
             enemy.position.y, enemy.position.z);
     }
 }

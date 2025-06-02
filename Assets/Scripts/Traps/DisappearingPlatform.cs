@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DisappearingPlatform : MonoBehaviour
 {
@@ -10,7 +7,7 @@ public class DisappearingPlatform : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     [Header("Settings Platform")] 
-    public bool IsColliderDisabled = false;
+    public bool IsColliderDisabled;
     public float Smooth = 0.1f;
     public float TimeStartCycle;
     
@@ -56,7 +53,7 @@ public class DisappearingPlatform : MonoBehaviour
 
     private IEnumerator StartAppear()
     {
-        Color color = spriteRenderer.color;
+        var color = spriteRenderer.color;
         for (var elapsedTime = 0.0f; elapsedTime < TimeAppearance; elapsedTime += Smooth)
         {
             color.a = elapsedTime / TimeAppearance;

@@ -5,10 +5,8 @@ public class TrapSound : MonoBehaviour
     [SerializeField] public AudioSource audioSource;
     [SerializeField] AudioClip movementSound;
 
-    private void Start()
-    {
-        audioSource.clip = movementSound;
-    }
+    private void Start() => audioSource.clip = movementSound;
+    
 
     public void PlayMovementSound()
     {

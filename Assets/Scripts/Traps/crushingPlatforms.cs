@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 public class CrushingPlatforms : MonoBehaviour
 { 
     [Header ("Movement")]
@@ -22,12 +20,10 @@ public class CrushingPlatforms : MonoBehaviour
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, nextPosition, PlatformSpeed * Time.deltaTime);
-        if (transform.position == nextPosition)
-        {
-            if (trapSound != null)
-                trapSound.PlayMovementSound();
-            nextPosition = (nextPosition == PointA.position) ? PointB.position : PointA.position;
-        }
+        if (transform.position != nextPosition) return;
+        if (trapSound != null)
+            trapSound.PlayMovementSound();
+        nextPosition = (nextPosition == PointA.position) ? PointB.position : PointA.position;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -36,8 +36,7 @@ public class EnemyArrow : EnemyDamage
 
     private new void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("CoffeeGrain"))
-            return;
+        if (collision.CompareTag("CoffeeGrain")) return;
         hit = true;
         base.OnTriggerEnter2D(collision);
         coll.enabled = false;

@@ -15,7 +15,6 @@ public class HealthForOther : MonoBehaviour
     
     [Header("Components")]
     [SerializeField] private Behaviour[] components;
-    private bool invulnerable;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip hurtSound;
@@ -35,12 +34,10 @@ public class HealthForOther : MonoBehaviour
         if (currentHealth > 0)
         {
             SoundManager.instance.PlaySound(hurtSound);
-            Debug.Log($"{currentHealth}");
             anim.SetTrigger("hurt");
             return;
         }
         SoundManager.instance.PlaySound(deathSound);
-        Debug.Log($"{currentHealth}");
         dead = true;
         anim.SetTrigger("dead");
         foreach (var component in components)

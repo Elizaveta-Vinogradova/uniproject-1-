@@ -65,11 +65,9 @@ public class Player : MonoBehaviour
             SoundManager.instance.PlaySound(coffeeSound);
             anim.SetTrigger("Drink");
         }
-        //jump
         if (Input.GetKeyDown(KeyCode.Space))
             Jump();
              
-        //adjustable jump height
         if (Input.GetKeyUp(KeyCode.Space) && body.linearVelocity.y > 0)
             body.linearVelocity = new Vector2(body.linearVelocity.x, body.linearVelocity.y / 2);
 
@@ -103,9 +101,7 @@ public class Player : MonoBehaviour
         else
         {
             if (IsGrounded())
-            {
                 body.linearVelocity = new Vector2(body.linearVelocity.x, jumpPower);
-            }
             else
             {
                 if (coyoteCounter > 0)
@@ -135,7 +131,6 @@ public class Player : MonoBehaviour
         return raycastHit.collider != null;
     }
     
-
     public bool CanAttack() => horizontalInput == 0 && IsGrounded() && NPC_controller.currentState != NPC_controller.NPCState.Talk && !OnWall();
     
     private bool IsGrounded()

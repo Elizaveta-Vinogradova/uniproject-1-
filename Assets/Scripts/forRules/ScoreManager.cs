@@ -20,7 +20,6 @@ public class ScoreManager : MonoBehaviour
         instance = this;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         hpText.text = $"{hp.ToString()}";
@@ -37,11 +36,5 @@ public class ScoreManager : MonoBehaviour
     {
         hp -= amount;
         hpText.text = $"{hp.ToString()}";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

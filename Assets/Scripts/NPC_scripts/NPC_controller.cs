@@ -10,7 +10,6 @@ public class NPC_controller : MonoBehaviour
     public NPC_patrol patrol;
     public NPC_talk talk;
     private Animator animator;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         defaultState = currentState;

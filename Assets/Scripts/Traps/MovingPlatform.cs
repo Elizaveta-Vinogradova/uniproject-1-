@@ -9,10 +9,7 @@ public class MovingPlatform : MonoBehaviour
 
     private Vector3 nextPosition;
 
-    private void Start()
-    {
-        nextPosition = PointB.position;
-    }
+    private void Start() => nextPosition = PointB.position;
 
     private void Update()
     {

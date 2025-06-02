@@ -21,7 +21,7 @@ public class MobKnifer : MonoBehaviour
     [Header("AttackSound")] [SerializeField]
     private AudioClip attackSound;
 
-private Animator anim;
+    private Animator anim;
     private Health playerHealth;
     private EnemyPatrol enemyPatrol;
 
@@ -59,12 +59,6 @@ private Animator anim;
             playerHealth = hit.transform.GetComponent<Health>();
 
         return hit.collider != null;
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
     private void DamagePlayer()

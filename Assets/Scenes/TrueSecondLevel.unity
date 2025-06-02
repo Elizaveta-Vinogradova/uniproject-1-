@@ -554,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 28805180}
   playerLayer:
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 38700215}
   playerLayer:
@@ -5234,34 +5234,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1679725233}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 182279718}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1365755338}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 928354393}
+        m_TargetAssemblyTypeName: PauseEscape, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5734,7 +5710,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.21541938, y: 0.91557693}
+  m_Offset: {x: -0.008961618, y: 0.91557693}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5744,7 +5720,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1242666, y: 5.096831}
+  m_Size: {x: 0.67550445, y: 5.096831}
   m_EdgeRadius: 0
 --- !u!4 &238016840
 Transform:
@@ -5802,7 +5778,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.51240456, y: 0.8348179}
+  m_Offset: {x: 0.7812275, y: 0.62939656}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5812,7 +5788,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.33121583, y: 4.5652924}
+  m_Size: {x: 0.8054365, y: 4.375206}
   m_EdgeRadius: 0
 --- !u!1 &240176926
 GameObject:
@@ -8632,7 +8608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 345100864}
   playerLayer:
@@ -11513,7 +11489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 457231304}
   playerLayer:
@@ -17183,7 +17159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 747486171}
   playerLayer:
@@ -20505,6 +20481,7 @@ GameObject:
   - component: {fileID: 928354389}
   - component: {fileID: 928354388}
   - component: {fileID: 928354392}
+  - component: {fileID: 928354393}
   m_Layer: 5
   m_Name: UICanvas
   m_TagString: Untagged
@@ -20613,6 +20590,22 @@ MonoBehaviour:
   hpText: {fileID: 303068060}
   coffeeText: {fileID: 1246233885}
   health: {fileID: 1045475262}
+--- !u!114 &928354393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928354387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a33711b2abe7432a93314cc9c3221137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 1679725233}
+  tutorialPanel: {fileID: 217721244}
+  pauseButton: {fileID: 182279718}
+  allGameObjects: {fileID: 1365755338}
 --- !u!1 &936998880
 GameObject:
   m_ObjectHideFlags: 0
@@ -20664,7 +20657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 936998885}
   playerLayer:
@@ -23069,7 +23062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 1021208284}
   playerLayer:
@@ -28774,6 +28767,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 482901613}
   - {fileID: 876960177}
   - {fileID: 1194088557}
   - {fileID: 1565325634}
@@ -28804,7 +28798,6 @@ Transform:
   - {fileID: 1578059159}
   - {fileID: 1476862488}
   - {fileID: 451821113}
-  - {fileID: 482901613}
   m_Father: {fileID: 1365755339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1246233885 stripped
@@ -31596,7 +31589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 1426213607}
   playerLayer:
@@ -32297,7 +32290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 1455319249}
   playerLayer:
@@ -36104,7 +36097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 1611138051}
   playerLayer:
@@ -38374,7 +38367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 1706768905}
   playerLayer:
@@ -41198,7 +41191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 1908082324}
   playerLayer:
@@ -46377,7 +46370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 2044619887058960097}
   playerLayer:
@@ -48149,7 +48142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCooldown: 3
   range: 1
-  damage: 2
+  damage: 1
   colliderDistance: 1.2
   boxCollider: {fileID: 5510778482772548658}
   playerLayer:
@@ -48494,6 +48487,6 @@ SceneRoots:
   - {fileID: 1939301828}
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1354528433}
   - {fileID: 1365755339}
   - {fileID: 1188286063}
+  - {fileID: 1354528433}

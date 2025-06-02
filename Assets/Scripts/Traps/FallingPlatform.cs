@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Fall : MonoBehaviour
+public class FallingPlatform : MonoBehaviour
 {
     [Header("Fall Settings")]
     public float fallDelay = 1.0f; 
