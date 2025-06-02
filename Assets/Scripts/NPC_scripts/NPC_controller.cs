@@ -1,5 +1,3 @@
-using Unity.VisualScripting;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class NPC_controller : MonoBehaviour
@@ -27,16 +25,12 @@ public class NPC_controller : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-        {
            SwitchState(NPCState.Talk);
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-        {
             SwitchState(defaultState);
-        }
     }
 }

@@ -23,14 +23,10 @@ public class SoundManager : MonoBehaviour
         sfxSource.volume = savedSfxVolume;
 
         if (musicSlider != null)
-        {
             musicSlider.value = savedMusicVolume;
-        }
 
         if (sfxSlider != null)
-        {
             sfxSlider.value = savedSfxVolume;
-        }
     }
 
     public void ChangeMusicVolume()
@@ -46,7 +42,7 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat("SfxVolume", sfxSlider.value);
         PlayerPrefs.Save();
     
-        TrapSound[] traps = FindObjectsOfType<TrapSound>();
+        var traps = FindObjectsOfType<TrapSound>();
         foreach (var trap in traps)
         {
             if (trap.audioSource != null)
@@ -54,8 +50,5 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip sound)
-    {
-        sfxSource.PlayOneShot(sound);
-    }
+    public void PlaySound(AudioClip sound) => sfxSource.PlayOneShot(sound);
 }
